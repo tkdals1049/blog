@@ -1,12 +1,14 @@
 # Site
-name: 'Mundana'
+name: 'tkdals1049'
 description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: '/mundana-theme-jekyll'
+url : "https://tkdals1049.github.io/blog" 
+baseurl : "" 
 disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
+email: 'tkdals1049@naver.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+remote_theme : tkdals1049/blog
 
 include: ["_pages"]
 permalink: /:title/
