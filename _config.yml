@@ -1,7 +1,7 @@
 # Site
 name: "tkdals1049"
 title: "지그의 게임개발기"
-description: "Jekyll template, Medium styled, free for bloggers."
+description: "지그재그 나아가는 지그의 게임개발기."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: /blog
