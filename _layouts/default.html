@@ -32,6 +32,13 @@ ga('send', 'pageview');
 </script>
 {% endif %}
 
+
+
+
+
+
+
+
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 <body class="{{layout}}">
 	<!-- defer loading of font and font awesome -->
@@ -49,23 +56,10 @@ ga('send', 'pageview');
 
 <div class="container">
 
-<!-- Site Title
-================================================== -->
-<div class="mainheading">
-    <h1 class="sitetitle">{{ site.name }}</h1>
-    <p class="lead">
-        {{ site.description }}
-    </p>
-</div>
-
-<!-- Content
-================================================== -->
 <div class="main-content">
     {{ content }}
 </div>
-    
 </div>
-
 </div> <!-- /.site-content -->
 
 <!-- Scripts
