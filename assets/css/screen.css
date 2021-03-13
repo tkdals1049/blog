@@ -46,8 +46,8 @@ pre {
 
 .main-content {
     min-height: 300px;
-    min-width:20%;
-    max-width:80%;
+    min-width:10%;
+    max-width:90%;
     padding-top: 1.5rem;
     margin-top: 57px;
     transition: all 0.4s;
