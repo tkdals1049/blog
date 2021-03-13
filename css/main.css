@@ -32,9 +32,11 @@ div.content {
 }
 
 #hello p,#summary p{
-	
+	text-align: justify;
 }
-
+#summary span{
+	text-align: justify;
+}
 .row {
 	margin-bottom:0px;
 }
