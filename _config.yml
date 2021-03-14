@@ -22,8 +22,8 @@ description: 嘿，我是刘训灼～这是我的子站，用于展示写的Hexo
 keywords: Blog,Hexo,Theme,刘训灼,LiuXunzhuo
 
 # 首页URL | Your URL
-link: Your_URL
-
+link: 'http://tkdals1049.github.io/blog'
+baseurl: 'blog'
 #标语 | Your Slogan
 words: Your Words
 
