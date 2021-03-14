@@ -1,95 +1,134 @@
-# 码志
+<div align="center">
+  <br>
+  <img src="/images/reverie-text.png" alt="Reverie" width="200"/>
+  <br>  
+  <p align="center">
+    <i>Support my work via <a href="https://paypal.me/AmitMerchant">Paypal</a></i>
+    •
+    <i>Would you be interested in <a href="https://www.producthunt.com/upcoming/reverie-pro">Reverie Pro</a>?</i>
+  </p>
+</div>
 
-我的个人博客：<https://mazhuang.org>，欢迎 Star 和 Fork。
+---
 
-## 概览
+Reverie is a [Jekyll](https://jekyllrb.com/)-powered theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for my blog.
 
-<!-- vim-markdown-toc GFM -->
+> [Theme demo](https://reverie-jekyll.netlify.app/)
 
-* [效果预览](#效果预览)
-* [Fork 指南](#fork-指南)
-* [使用文档](#使用文档)
-* [经验与思考](#经验与思考)
-* [联系我](#联系我)
-* [致谢](#致谢)
+This is a plug-and-play Jekyll theme best suited to use on [GitHub Pages](https://pages.github.com) without even setting up a local environment.
 
-<!-- vim-markdown-toc -->
+![](/images/reverie-demo.png)
 
-## 效果预览
+|  Responsiveness            |  Search | Categories |
+|---------------------|----------------------|----------------------|
+|![Responsiveness](/images/mobile-demo.png) | ![search](/images/search.png) | ![categories](/images/categories.png) |
 
-**[在线预览 &rarr;](https://mazhuang.org)**
+# Table of Contents
+  - [Features overview](#features-overview)
+  - [Using Reverie on GitHub Pages](#using-reverie-on-github-pages)
+    - [1. Fork Reverie to your User Repository](#1-fork-reverie-to-your-user-repository)
+    - [2. Customize and view your site](#2-customize-and-view-your-site)
+    - [3. Publish your first blog post](#3-publish-your-first-blog-post)
+  - [Using Categories in Reverie](#using-categories-in-reverie)
+  - [Pagination](#pagination)
+  - [RSS](#rss)
+  - [Sitemap](#sitemap)
+  - [Emailware](#emailware)
+  - [The name?](#the-name)
+  - [License](#license)
 
-![screenshot home](https://mazhuang.org/assets/images/screenshots/home.png)
+## Features overview
 
-## Fork 指南
+- Clean and minimal design
+- Single column post layout
+- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
+- Fully responsive and mobile optimized theme
+- Sass/Coffeescript support using Jekyll 2.0
+- Free hosting on your GitHub Pages user site
+- All the SEO goodies come built-in
+- Markdown blogging
+- Supports [Pullquotes](https://reverie-jekyll.netlify.app/pullquotes/)
+- Syntax highlighting using Pygments
+    - [Dracula syntax theme](https://draculatheme.com/) included
+- Disqus commenting
+- Social media icons
+- Google Analytics integration
+- Supports [Google Analytics 4](https://support.google.com/analytics/answer/10089681?hl=en)
+- Fuzzy search across blog posts
+- Blog with pagination
+- Categorize posts out-of-the box
+- RSS Feed
+- Built-in sitemap
 
-Fork 本项目之后，还需要做一些事情才能让你的页面「正确」跑起来。
+> <p><i>Like this theme?</i> If so, consider donating a small amount that will help my maintaining this project further.<p>
+> You can support me via <a href="https://paypal.me/AmitMerchant">Paypal</a>.
 
-1. 正确设置项目名称与分支。
+## Using Reverie on GitHub Pages
 
-   按照 GitHub Pages 的规定，名称为 `username.github.io` 的项目的 master 分支，或者其它名称的项目的 gh-pages 分支可以自动生成 GitHub Pages 页面。
+Setting up Reverie on GitHub Pages is as simple as it gets!
 
-2. 修改域名。
+### 1. Fork Reverie to your User Repository
 
-   如果你需要绑定自己的域名，那么修改 CNAME 文件的内容；如果不需要绑定自己的域名，那么删掉 CNAME 文件。
+Fork this repository, then rename the repository to `yourgithubusername.github.io`.
 
-3. 修改配置。
+Alternatively, you can click the [`Use this template`](https://github.com/amitmerchant1990/reverie/generate) button if you want to create a repository with a clean commit history which will use Reverie as a template.
 
-   网站的配置基本都集中在 \_config.yml 文件中，将其中与个人信息相关的部分替换成你自己的，比如网站的 url、title、subtitle 和第三方评论模块的配置等。
+Your Jekyll blog will often be viewable immediately at <https://yourgithubusername.github.io> (if it's not, you can often force it to build by completing step 2).
 
-   **评论模块：** 目前支持 disqus、gitment 和 gitalk，选用其中一种就可以了，推荐使用 gitalk。它们各自的配置指南链接在 \_config.yml 文件的 Comments 一节里都贴出来了。
+### 2. Customize and view your site
 
-   **注意：** 如果使用 disqus，因为 disqus 处理用户名与域名白名单的策略存在缺陷，请一定将 disqus.username 修改成你自己的，否则请将该字段留空。我对该缺陷的记录见 [Issues#2][3]。
+Enter your site name, description, avatar and many other options by editing the `_config.yml` file. You can easily turn on Google Analytics tracking, Disqus commenting and social icons here.
 
-4. 删除我的文章与图片。
+Making a change to `_config.yml` (or any file in your repository) will force GitHub Pages to rebuild your site with Jekyll. Your rebuilt site will be viewable a few seconds later at <https://yourgithubusername.github.io> - if not, give it ten minutes as GitHub suggests and it'll appear soon.
 
-   如下文件夹中除了 template.md 文件外，都可以全部删除，然后添加你自己的内容。
+### 3. Publish your first blog post
 
-   * \_posts 文件夹中是我已发布的博客文章。
-   * \_drafts 文件夹中是我尚未发布的博客文章。
-   * \_wiki 文件夹中是我已发布的 wiki 页面。
-   * images 文件夹中是我的文章和页面里使用的图片。
+Delete all files from `_posts`directory and create a new file called `/_posts/2019-2-13-Hello-World.md` to publish your first blog post. That's all you need to do to publish your first blog post! This [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) might come in handy while writing the posts.
 
-5. 修改「关于」页面。
+> You can add additional posts in the browser on GitHub.com too! Just hit the <kbd>Create new file</kbd> button in `/_posts/` to create new content. Just make sure to include the [front-matter](http://jekyllrb.com/docs/frontmatter/) block at the top of each new blog post and make sure the post's filename is in this format: year-month-day-title.md
 
-   pages/about.md 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 \_data 目录下的 skills.yml 和 social.yml 文件里的数据。
+## Using Categories in Reverie
 
-## 使用文档
+You can categorize your content based on `categories` in Reverie. For this, you just need to add `categories` in front matter like below:
 
-- [本博客模板常见问题 Q & A](https://mazhuang.org/2020/05/03/blog-template-qna/)。
+For adding single category:
 
-- 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。
+```md
+categories: JavaScript
+```
 
-## 经验与思考
+For adding multiple categories:
 
-* 排版建议遵照一定的规范，推荐 [中文文案排版指北（简体中文版）][1]。
+```md
+categories: [PHP, Laravel]
+```
 
-* 简约，尽量每个页面都不展示多余的内容。
+The categorized content can be shown over this URL: <https://yourgithubusername.github.io/categories/>
 
-* 有时一图抵千言，有时可能只会拖慢网页加载速度。
+## Pagination
 
-* 言之有物，不做无痛之呻吟。
+Pagination of posts in Reverie works out-of-the-box. You only need to specify the number of posts you want on a single page in `_config.yml` and Reverie will take care of the rest.
 
-* 如果写技术文章，那先将技术原理完全理清了再开始写，一边摸索技术一边组织文章效率较低。
+```yml
+paginate: 6
+```
 
-* 杜绝难断句、难理解的长句子，如果不能将其拆分成几个简洁的短句，说明脑中的理解并不清晰。
+## RSS
 
-* 可以学习一下那些高质量的博主，他们的行文，内容组织方式，有什么值得借鉴的地方。
+Reverie comes with a [RSS feed](https://en.wikipedia.org/wiki/RSS) in-built. The generated RSS Feed of your blog can be found at <https://yourgithubusername.github.io/feed>. You can see the example RSS feed over [here](https://reverie-jekyll.netlify.app/feed.xml).
 
-## 联系我
+## Sitemap
 
-如果对本博客模板或者内容有任何建议，可以通过 [Issues](https://github.com/mzlogin/mzlogin.github.io/issues) 或者微信公众号「闷骚的程序员」与我取得联系。
+The generated sitemap of your blog can be found at <https://yourgithubusername.github.io/sitemap>. You can see the example sitemap feed over [here](https://reverie-jekyll.netlify.app/sitemap).
 
-<img width="192px" height="192px" src="https://mazhuang.org/assets/images/qrcode.jpg"/>
+## Emailware
+Reverie is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this theme or it has helped you in any way, I'd like you send me an email at <bullredeyes@gmail.com> about anything you'd want to say about this software. I'd really appreciate it!
 
-## 致谢
+## The name?
 
-本博客外观基于 [DONGChuan](https://dongchuan.github.io) 修改，感谢！
+reverie - _a state of being pleasantly lost in one's thoughts; a daydream._<br><sup>/ˈrɛv(ə)ri/</sup> 
 
-Thanks for JetBrains' support.
 
-<a href="https://www.jetbrains.com/?from=mzlogin.github.io"><img src="./assets/images/jetbrains.svg"/></a>
+## License
 
-[1]: https://github.com/mzlogin/chinese-copywriting-guidelines
-[2]: https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/
-[3]: https://github.com/mzlogin/mzlogin.github.io/issues/2
+MIT

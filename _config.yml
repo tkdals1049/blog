@@ -1,155 +1,102 @@
-# ---------------- #
-#   Main Configs   #
-# ---------------- #
-baseurl:
-url: https://mazhuang.org
-date_format: "ordinal"
-title: 码志
-subtitle: "公众号：闷骚的程序员"
-description: "马壮的个人博客，公众号：闷骚的程序员"
-keywords: 码志, Zhuang Ma, mzlogin, mazhuang, 闷骚的程序员
-timezone: Asia/Shanghai
-encoding: "utf-8"
-side_bar_repo_limit: 5
-repository: mzlogin/mzlogin.github.io
-# 对 css 和 js 资源的 cdn 加速配置
-cdn:
-    jsdelivr:
-        enabled: true
-# 组件配置
-components:
-    # 分享
-    share:
-        enabled: false
-    # 不蒜子访问统计
-    busuanzi:
-        enabled: true
-        start_date: 2020-05-03
-# 压缩页面内容
-compress_html:
-  clippings: all
-  comments: ["<!--", "-->"]
-# 文章字数统计
-word_count:
-    enabled: true
-# 代码高亮风格，支持的 theme 列表见 https://github.com/mzlogin/rouge-themes
-highlight_theme: github
+#
+# This file contains configuration flags to customize your site
+#
 
-# ---------------- #
-#      Author      #
-# ---------------- #
-author: Zhuang Ma
-organization: 
-organization_url: 
-github_username: mzlogin
-location: Wuhan, China
-email: chumpma@gmail.com
+# Name of your site (displayed in the header)
+name: Reverie
 
-# ---------------- #
-#    Navigation    #
-# ---------------- #
-navs:
-  -
-    href: /
-    label: 首页
+# Name of the author
+author: Amit Merchant
 
-  -
-    href: /categories/
-    label: 分类
+# Short bio or description (displayed in the header)
+description: An elegant Jekyll theme
 
-#   -
-#     href: /archives/
-#     label: 归档
+# URL of your avatar or profile pic (you could use your GitHub profile pic)
+avatar: /images/reverie.png
 
-#   -
-#     href: /open-source/
-#     label: 开源
+#
+# Flags below are optional
+#
 
-  -
-    href: /wiki/
-    label: 维基
+# Includes an icon in the footer for each username you enter
+footer-links:
+  dribbble:
+  email: amit.d.merchant@gmail.com
+  facebook:
+  flickr:
+  github: amitmerchant1990/reverie
+  instagram:
+  linkedin: 
+  pinterest:
+  rss: rss
+  twitter: amit_merchant
+  stackoverflow: 
+  youtube: # channel/<your_long_string> or user/<user-name>
+  googleplus: # anything in your profile username that comes after plus.google.com/
+  playconsole:
 
-  -
-    href: /links/
-    label: 链接
 
-  -
-    href: /about/
-    label: 关于
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+# You can find your shortname on the Settings page of your Disqus account
+disqus: 
 
-# ---------------- #
-#       RSS        #
-# ---------------- #
-subscribe_rss: /feed.xml
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: UA-43339302-11
 
-# ---------------- #
-#      Jekyll      #
-# ---------------- #
-markdown: kramdown
+# For newer "GA4" analytics, use the following instead of the "UA" entry above
+#google_analytics_ga4: G-GABC1DEFG
+
+# Your website URL (e.g. http://amitmerchant1990.github.io or http://www.amitmerchant.com)
+# Used for Sitemap.xml and your RSS feed
+url: http://www.amitmerchant.com/reverie
+enforce_ssl: https://www.amitmerchant.com/reverie
+
+# If you're hosting your site at a Project repository on GitHub pages
+# (http://yourusername.github.io/repository-name)
+# and NOT your User repository (http://yourusername.github.io)
+# then add in the baseurl here, like this: "/repository-name"
+baseurl: "/reverie"
+
+#
+# !! You don't need to change any of the configuration flags below !!
+#
+
+permalink: /:title/
+
+# The release of Jekyll Now that you're using
+version: v1.2.0
+
+# Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
-    input: GFM
-highlighter: rouge
-paginate: 10
-lsi: false
-quiet: false
-excerpt_separator: "\n\n"
-permalink: /:year/:month/:day/:title/
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
+
+# Use the following plug-ins
 plugins:
-    - jekyll-github-metadata
-    - rouge
-#     - jekyll-html-pipeline
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-feed
-    - jemoji
-#     - jekyll-mentions
-collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-seo-tag
+  - jekyll-paginate
 
-# ---------------- #
-#      Comments    #
-# ---------------- #
-# support provider: disqus, gitment, gitalk
-comments_provider: gitalk
-# !!!重要!!! 请修改下面这些信息为你自己申请的
-# !!!Important!!! Please modify infos below to yours
-# https://disqus.com
-disqus:
-    username: 
-# https://imsun.net/posts/gitment-introduction/
-gitment:
-    owner: mzlogin
-    repo: blog-comments
-    oauth:
-        client_id: d2e1cbbd298958076462
-        client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
-# https://github.com/gitalk/gitalk#install
-gitalk:
-    owner: mzlogin
-    repo: blog-comments
-    clientID: d2e1cbbd298958076462
-    clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
-# 在使用其它评论组件时可点击显示 Disqus
-lazy_load_disqus : false
+include: ['_pages']
 
-# ---------------- #
-#      Search      #
-# ---------------- #
-simple_jekyll_search:
-    # 是否支持全文搜索
-    fulltext: false
-    # 最多显示多少条搜索结果
-    limit: 10
+paginate: 6
+paginate_path: /page:num/
 
-# ---------------- #
-#      Google      #
-# ---------------- #
-google:
-    analytics_id: UA-80669434-1
-    adsense:
-        footer: true
-        sidebar: true 
-        content_header: true
-        content_footer: false
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
