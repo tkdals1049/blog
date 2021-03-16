@@ -16,11 +16,6 @@ a {
     transition: all 0.2s;
 }
 
-body{
-	background-color: #111111;
-	color: white;
-    opacity: 0.5;
-}
 
 a:hover {
     color: #038252;
