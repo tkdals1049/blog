@@ -1,64 +1,73 @@
-# 当前版本 | Theme Version
-Hexo: "2.1"
+# Site
+name: "tkdals1049"
+title: "지그의 블로그"
+description: "일과나 작업에 대해 이것 저것 글 쓰는 게시판."
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+url: 'http://tkdals1049.github.io'
+baseurl: '/blog'
+google_analytics: 'UA-46278016-1'
+disqus: 'demowebsite'
+mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+include: ["_pages"]
+permalink: /:title/
 
-#语言 | Language
-# en | zh-Hans
-#请在hexo文件下的"_config.yml"修改language
-language: en
+# Authors
+authors:
+  sal:
+    name: Sal
+    display_name: Sal
+    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    email: wowthemesnet@gmail.com
+    web: https://www.wowthemes.net
+    twitter: https://twitter.com/wowthemesnet
+    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
+  john:
+    name: John
+    display_name: John    
+    avatar: 'assets/images/avatar.png'
+    gravatar: b1cc14991db7a456fcd761680bbc8f81
+    email: wowthemesnet@gmail.com
+    web: https://www.wowthemes.net
+    twitter: https://twitter.com/wowthemesnet
+    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
 
-# 网站标题 | Title
-logo_title: Title Name
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
 
-# 初始化风格 | Default Style "black/light"
-style: black
-#style: light
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 
-#SEO优化
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: "ca-pub-3412143450191416"
+adsense-data-ad-slot: "1363087678"
 
-## 网站描述
-description: 嘿，我是刘训灼～这是我的子站，用于展示写的Hexo主题：Coder。欢迎访问！
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
 
-## 网站关键词：用英文逗号分割
-keywords: Blog,Hexo,Theme,刘训灼,LiuXunzhuo
-
-# 首页URL | Your URL
-link: 'http://tkdals1049.github.io/blog'
-baseurl: 'blog'
-#标语 | Your Slogan
-words: Your Words
-
-# 你的昵称 | Your Name
-author: Your Name
-
-# 中心图标选择男女或者自定义 | Gender
-gender: /img/male.png #/img/female.png
-
-# 站点小图标地址 | Small Icon of Your Site
-favicon: /img/favicon.ico
-
-# 菜单栏配置 | Nav Bar Settings
-menu:
-  GitHub🐒: https://github.com/tkdals1049
-
-
-# 站内关键词搜索 | Local Search
-search:
- enable: true
- path: search.xml
- field: post
- # onload: true
-
-# 评论系统 | Comments
-## 做了域名限制，请改成自己的 KEY
-## 若关闭valine 设置enable为false∂
-valine:
-  enable: true
-  appId: NOsswOncKgc8HOxqo9oxIWlX-gzGzoHsz
-  appKey: z1FihjWEbS8uIfUQdmCtK7zz
-
-# visitors count
-counter:
-  enable: true
-
-highlight:
-  enable: true
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
