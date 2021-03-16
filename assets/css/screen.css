@@ -19,6 +19,7 @@ a {
 body{
 	background-color: #111111;
 	color: white;
+    opacity: 0.5;
 }
 
 a:hover {
